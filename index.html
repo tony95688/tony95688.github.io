@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discord Webhook Messenger</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              discord: {
+                bg: '#313338',
+                sidebar: '#2b2d31',
+                element: '#1e1f22',
+                hover: '#3f4147',
+                blurple: '#5865F2',
+                'blurple-hover': '#4752C4',
+                green: '#23a559',
+                red: '#da373c',
+                text: '#dbdee1',
+                'text-muted': '#949ba4',
+                divider: '#1e1f22' // Darker line
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #313338;
+        color: #dbdee1;
+        font-family: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+      /* Custom scrollbar to match Discord */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+        background-color: #2b2d31;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #1a1b1e;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-track {
+        background-color: #2b2d31;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.1/",
+    "react": "https://esm.sh/react@^19.2.1",
+    "@google/genai": "https://esm.sh/@google/genai@^1.32.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.1/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.559.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
